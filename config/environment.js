@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ember-white-label',
     environment,
     rootURL: '/',
+    theme: process.env.theme,
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -24,11 +25,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.theme = 'light';
   }
 
   if (environment === 'test') {
